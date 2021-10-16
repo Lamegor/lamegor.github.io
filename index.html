@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Страница начинающего веб разработчика">
+    <meta name="author" content="Egor">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="all">
+
+    <meta property="og:title" content="Это моя первая страница...">
+
+    <title>Андрей Браун - Веб-разработчик</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Андрей Браун</div>
+            <div class="menu">
+                <ul>
+                    <li>Обо мне</li>
+                    <li>Услуги</li>
+                    <li>Кейсы</li>
+                    <li>Прайс</li>
+                    <li>Отзывы</li>
+                    <li>Контакты</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main">
+
+    </div>
+
+    <div class="title_container">
+        <h1>Привет <br> Я Андрей Браун</h1>
+        <h4>Фулл стек веб-разработчик</h4>
+        <input type="submit" value="Обо мне">
+        <input type="submit" value="Мои работы">
+    </div>
+
+    <div class="about_me" align="center">
+        <!--такой тэг как align нужно было использовать в css, но я не очень хорошо помню как это делается, в будущих версиях сайта исправлю-->
+        <h2>Обо мне</h2>
+        <img src="img/Черта заголовка.png" alt="">
+        <br><br>
+        <img src="img/фотка.png" alt="Андрей Браун">
+        <span><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quae minus perspiciatis minima fugit sed
+            saepe est assumenda, esse aliquid facilis, sunt a. Pariatur, quia iusto? Quibusdam asperiores aliquam qui
+            voluptatibus commodi adipisci.</span>
+        <br>
+        <span><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quae minus perspiciatis minima fugit sed
+            saepe est assumenda, esse aliquid facilis, sunt a. Pariatur, quia iusto? Quibusdam asperiores aliquam qui
+            voluptatibus commodi adipisci.</span>
+        <br>
+        <input type="submit" value="Скачать резюме">
+    </div>
+
+    <div class="what_i_can_do">
+        <div class="title" align="center">
+            <h2>Что я умею</h2>
+            <img src="img/Черта заголовка.png" alt="">
+            <!--и снова align-->
+            <br><br>
+        </div>
+        <div class="what_i_can_do-list">
+            <ul>
+                <li>
+                    <h4>Веб-дизайн</h4>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque amet corporis eaque, iste pariatur
+                    ad. Rerum optio et quos ipsum?
+                </li>
+                <li>
+                    <h4>Разработка</h4>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem eum, obcaecati mollitia iusto commodi
+                    quas doloremque nesciunt! Perferendis, ratione incidunt.
+                </li>
+                <li>
+                    <h4>CEO-Оптимизация</h4>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod excepturi placeat tenetur veritatis,
+                    ea voluptatum iusto sint optio debitis laborum.
+                </li>
+                <li>
+                    <h4>Маркетинг</h4>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et vero facere neque sapiente alias quae
+                    sit. Esse autem sunt quos.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="cases">
+        <div class="title" align="center">
+            <h2>Кейсы</h2>
+            <img src="img/Черта заголовка.png" alt="">
+            <br><br>
+        </div>
+        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum ad corrupti, magni natus labore
+            repellat?</span>
+        <br><br>
+        <img src="img/Кейсы Фото.png" alt="Фото проекта">
+        <h3>CLIENT:</h3>
+        <span>Какая-то компания</span>
+        <h3>WEBSITE:</h3>
+        <span>http://www.somedomain.com</span>
+        <h3>Название проекта</h3>
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi officia corporis nobis facilis dignissimos
+            numquam dolorum, dicta obcaecati impedit? Nobis, veritatis. Aut ducimus ullam doloremque tempora,
+            perspiciatis fugit dolorem distinctio.</span>
+    </div>
+
+    <div class="costing" align="center">
+        <div class="title" align="center">
+            <h2>Расчет стоимости</h2>
+            <img src="img/Черта заголовка.png" alt="">
+            <br><br>
+        </div>
+        <h3>ТИП САЙТА</h3>
+        <select name="site_type" id="site_type" disabled>
+            <option value="1">Проверка селектед</option>
+            <option value="2" selected>Выберите пункт...</option>
+        </select>
+        <h3>ДИЗАЙН</h3>
+        <select name="site_type" id="site_type" disabled>
+            <option value="1" selected>Выберите пункт...</option>
+        </select>
+        <h3>АДАПТИВНОСТЬ</h3>
+        <select name="site_type" id="site_type" disabled>
+            <option value="1" selected>Выберите пункт...</option>
+        </select>
+        <br>
+        <h4>Cроки <big>0</big></h4>
+        <h4>Стоимость <big>0</big></h4>
+        <!--Почему VS:Code подсвечивает big красным, по той же причине, что и align?-->
+    </div>
+
+    <div class="a_few_statistics">
+        <div class="title" align="center">
+            <h3>НЕМНОГО СТАТИСТИКИ</h3>
+            <img src="img/Черта заголовка.png" alt="">
+            <br><br>
+        </div>
+        <img src="img/смайл.png" alt="Смайлик">
+        <h3>120</h3>
+        <span>СЧАСТЛИВЫХ КЛИЕНТОВ</span>
+        <br><br>
+        <img src="img/скобки.png" alt="Скобки">
+        <h3>4,600</h3>
+        <span>ЧАСОВ РАБОТЫ</span>
+        <br><br>
+        <img src="img/галочка.png" alt="Галочка">
+        <h3>3400</h3>
+        <span>ПРОЕКТОВ ЗАВЕРШЕНО</span>
+        <br><br>
+        <img src="img/кубок.png" alt="Кубок">
+        <h3>23</h3>
+        <span>НАГРАД ПОЛУЧЕНО</span>
+    </div>
+
+    <div class="reviews" align="center">
+        <div class="title" align="center">
+            <h3>ОТЗЫВЫ</h3>
+            <img src="img/Черта заголовка.png" alt="">
+            <br><br>
+        </div>
+        <img src="img/Михаил.png" alt="Михаил">
+        <br><br>
+        <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae necessitatibus animi quae mollitia
+            architecto accusantium, distinctio maxime! Ipsa, recusandae eum.</span>
+        <br><br>
+        <span><b>Михаил</b>, Ген директор ПАО "Газпром".</span>
+        <br><br>
+        <input type="radio" name="reviews_choice" value="1" checked>
+        <input type="radio" name="reviews_choice" value="2">
+        <input type="radio" name="reviews_choice" value="3">
+    </div>
+
+    <div class="my contacts" align="center">
+        <div class="title_contacts" align="center">
+            <h3>МОИ КОНТАКТЫ</h3>
+            <img src="img/Черта заголовка.png" alt="">
+            <br><br>
+        </div>
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, modi!</span>
+        <ul>
+            <li>
+                <img src="img/гео.png" alt="">
+                <br><br>
+                <span>Санкт-Петербург<br>Невский проспект 11</span>
+            </li>
+            <br>
+            <li>
+                <img src="img/конверт.png" alt="">
+                <br><br>
+                <span>info@companyname.com</span>
+            </li>
+            <br>
+            <li>
+                <img src="img/труба.png" alt="">
+                <br><br>
+                <span>+7 999 999-99-99</span>
+            </li>
+            <br>
+        </ul>
+        <h4>ОСТАВЬТЕ МНЕ СООБЩЕНИЕ</h4>
+        <input type="name" name="name" id="" placeholder="Имя">
+        <input type="email" name="email" id="" placeholder="Email">
+        <input type="text" name="text" id="" placeholder="Сообщение">
+        <input type="submit" value="Отправить">
+    </div>
+
+    <div class="map">
+        <script type="text/javascript" charset="utf-8" async
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac6d5f9ce8b3af6e7e7e8fcee140748c5b85b40fb60d2868839f597a4744e105e&amp;width=device-width&amp;height=400&amp;lang=ru_RU&amp;scroll=true">
+        </script>
+    </div>
+
+    <footer>Copyright © 2021 Андрей Браун. Design by Web</footer>
+</body>
+
+</html>

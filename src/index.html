@@ -17,6 +17,12 @@
 </head>
 
 <body>
+    <div class="preloader">
+        <div class="preloader__row">
+          <div class="preloader__item"></div>
+          <div class="preloader__item"></div>
+        </div>
+      </div>
     <header>
         <nav>
             <div class="logo">Андрей Браун</div>
@@ -195,9 +201,12 @@
             <span><b>Михаил</b>, Ген директор ПАО "Газпром".</span>
             <br><br>
             <div class="radio_buttons">
-                <input type="radio" class="custom_button" name="reviews_choice" value="1" checked><label for="reviews_choice"></label>
-                <input type="radio" class="custom_button" name="reviews_choice" value="2"><label for="reviews_choice"></label>
-                <input type="radio" class="custom_button" name="reviews_choice" value="3"><label for="reviews_choice"></label>
+                <input type="radio" class="custom_button" name="reviews_choice" value="1" checked><label
+                    for="reviews_choice"></label>
+                <input type="radio" class="custom_button" name="reviews_choice" value="2"><label
+                    for="reviews_choice"></label>
+                <input type="radio" class="custom_button" name="reviews_choice" value="3"><label
+                    for="reviews_choice"></label>
             </div>
         </div>
 
@@ -245,6 +254,16 @@
     </main>
 
     <footer>Copyright © 2021 Андрей Браун. Design by Web</footer>
+
+    <script>
+        window.onload = function () {
+          document.body.classList.add('loaded_hiding');
+          window.setTimeout(function () {
+            document.body.classList.add('loaded');
+            document.body.classList.remove('loaded_hiding');
+          }, 500);
+        }
+      </script>
 </body>
 
 </html>

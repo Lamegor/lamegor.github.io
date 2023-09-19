@@ -1,0 +1,87 @@
+header {
+    padding: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: linear-gradient(-45deg, #585fa8, #25BBAB, #2699D6) no-repeat;
+    
+    color: #070C21;
+}
+
+body {
+    background-color: #F1F9FE;
+    
+    /*
+    background-color: #070C21;
+    color: #2699D6;
+    background: linear-gradient(-45deg, #585fa8, #25BBAB, #2699D6) no-repeat;
+    
+    */
+}
+
+.mainBox {
+    margin: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.mainBox input{
+    border: 1px solid;
+    border-radius: 5px;
+}
+.mainBox input:active{
+    box-shadow: 0 0 5px#2699D6;
+}
+.mainBox button{
+    height: 30px;
+    width: 200px;
+    background-color: #585fa8;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: all 0.2s;
+    transform: scale(1);
+    color: #FFFFFF;
+}
+.mainBox button:hover{
+    background: linear-gradient(-45deg, #585fa8, #25BBAB, #2699D6) no-repeat;
+    transform: scale(1.05);
+
+}
+.mainBox button:active{
+    background: linear-gradient(-45deg, #3f4378, #167168, #165578) no-repeat;
+    transform: scale(0.95);
+}
+
+textarea {
+    margin-top: 10px;
+    font-size: 17px;
+    color: #737373;
+    font-weight: bold;
+    padding: 10px;
+    opacity: 0.8;
+    resize: none;
+    width: 632px;
+    height: 120px;
+    border-radius: 2px;
+    transition: all 0.2s;
+    transform: scale(1);
+}
+
+
+footer {
+    height: 92px;
+    background-color: #070C21;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    color: #2699D6;
+    position: absolute; /* Абсолютное позиционирование */
+    bottom: 0; /* Размещение футера внизу страницы */
+    width: 100%; /* Ширина футера на всю ширину страницы */
+}
+.footerBox {
+    padding: 20px;
+}

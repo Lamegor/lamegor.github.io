@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Генератор паролей</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="GenPassStyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header>
+        <div class="headerBox container col-6">
+            Генератор паролей
+        </div>
+    </header>
+    <main>
+        <div class="mainBox container col-6 mx-auto">
+            <input type="text" id="passwordInput" readonly><br>
+            <button type="button" id="generateButton">Сгенирировать</button>
+            <br>
+            <input type="checkbox" name="" id="checkbox_a">Строчные латинские a-z<br>
+            <input type="checkbox" name="" id="checkbox_A">Заглавные строчные A-Z<br>
+            <input type="checkbox" name="" id="checkbox_0">Цифры 0-9<br>
+            <input type="checkbox" name="" id="charset_$">Спецсимволы<br>
+            <input type="number" name="" id="passLength">Длина пароля<br>
+        </div>
+        
+    </main>
+    <footer>
+        <div class="footerBox">
+            Copyright © 2023
+            <a href="https://vk.com/lamegor0">Казаков Егор</a>
+            <br>КИ21-02\1б ИКИТ СФУ 2023
+        </div>
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+    <script src="GenPassScript.js"></script>
+</body>
+
+</html>

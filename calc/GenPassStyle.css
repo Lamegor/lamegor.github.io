@@ -85,3 +85,28 @@ footer {
 .footerBox {
     padding: 20px;
 }
+
+.progress {
+    height: 20px;
+    margin-top: 10px;
+}
+
+/* Стилизация прогрессбара в зависимости от уровня сложности */
+.progress-bar {
+    transition: width 0.3s ease-in-out; /* Плавная анимация изменения ширины */
+}
+
+.weak {
+    background-color: #ff5733; /* Красный цвет для слабых паролей */
+}
+
+.moderate {
+    background-color: #ffc433; /* Оранжевый цвет для средних паролей */
+}
+
+.strong {
+    background-color: #33ff57; /* Зеленый цвет для сильных паролей */
+}
+.ikit {
+    background: linear-gradient(-45deg, #585fa8, #25BBAB, #2699D6) no-repeat;;
+}

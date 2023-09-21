@@ -35,3 +35,55 @@ document.getElementById("generateButton").addEventListener("click", function () 
     const generatedPassword = generatePassword(length); // Длина пароля 12 символов (можно изменить)
     passwordInput.value = generatedPassword; // Выводим сгенерированный пароль в поле ввода
 });
+
+function calculatePasswordEntropy(password) {
+    const charset = 128; // Размер алфавита (ASCII символов)
+    const length = password.length;
+
+    if (length === 0) {
+        return 0; // Пароль пустой
+    }
+
+    let entropy = 0;
+    for (let i = 0; i < length; i++) {
+        const charCode = password.charCodeAt(i);
+        if (charCode >= 33 && charCode <= 126) {
+            entropy += Math.log2(charset); // Добавляем логарифм размера алфавита
+        }
+    }
+
+    return entropy;
+}
+
+function updateProgressBar() {
+    const passwordInput = document.getElementById("passwordCheck");
+    const progressBar = document.getElementById("progressBar");
+    const strengthText = document.getElementById("strengthText");
+
+    const password = passwordInput.value;
+    const entropy = calculatePasswordEntropy(password);
+    const maxEntropy = 128; // Максимальная энтропия (примерное значение)
+
+    const strengthPercentage = (entropy / maxEntropy) * 100;
+    progressBar.style.width = strengthPercentage + "%";
+    progressBar.setAttribute("aria-valuenow", strengthPercentage);
+
+    // Определение уровня сложности и добавление класса с цветом
+    if (entropy < 40) {
+        strengthText.textContent = "Слабый";
+        progressBar.classList.remove("moderate", "strong", "ikit");
+        progressBar.classList.add("weak");
+    } else if (entropy < 80) {
+        strengthText.textContent = "Средний";
+        progressBar.classList.remove("weak", "strong", "ikit");
+        progressBar.classList.add("moderate");
+    } else if (entropy < maxEntropy){
+        strengthText.textContent = "Сильный";
+        progressBar.classList.remove("weak", "moderate", "ikit");
+        progressBar.classList.add("strong");
+    } else {
+        strengthText.textContent = "ИКИТ";
+        progressBar.classList.remove("weak", "moderate", "strong");
+        progressBar.classList.add("ikit");
+    }
+}

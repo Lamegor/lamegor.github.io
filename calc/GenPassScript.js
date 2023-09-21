@@ -87,3 +87,34 @@ function updateProgressBar() {
         progressBar.classList.add("ikit");
     }
 }
+
+
+var infoButton = document.getElementById("infoGenButton");
+var infoModal = document.getElementById("infoModal");
+var closeButton = document.getElementsByClassName("close")[0];
+
+// При клике на кнопку "Инфо", показываем всплывающее окно
+infoButton.onclick = function() {
+    infoModal.style.display = "block";
+    setTimeout(function() {
+        infoModal.style.opacity = "1"; // Плавно устанавливаем непрозрачность в 1
+    }, 10);
+}
+
+// При клике на кнопку закрытия, скрываем всплывающее окно
+closeButton.onclick = function() {
+    infoModal.style.opacity = "0"; // Плавно устанавливаем непрозрачность в 0
+    setTimeout(function() {
+        infoModal.style.display = "none";
+    }, 300); // Добавляем задержку для плавного закрытия
+}
+
+// При клике вне всплывающего окна, скрываем его
+window.onclick = function(event) {
+    if (event.target == infoModal) {
+        infoModal.style.opacity = "0"; // Плавно устанавливаем непрозрачность в 0
+        setTimeout(function() {
+            infoModal.style.display = "none";
+        }, 300); // Добавляем задержку для плавного закрытия
+    }
+}

@@ -4,12 +4,12 @@ header {
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background: linear-gradient(-45deg, #585fa8, #25BBAB, #2699D6) no-repeat;
-    
     color: #070C21;
 }
 
 body {
     background-color: #F1F9FE;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     
     /*
     background-color: #070C21;
@@ -25,33 +25,66 @@ body {
     margin-right: auto;
     
 }
-.mainBox input{
+.mainBox input {
     border: 1px solid;
-    border-radius: 5px;
+    border-radius: 7px;
+}
+#passwordInput, #passwordCheck{
+    width: 100%;
 }
 .mainBox input:active{
     box-shadow: 0 0 5px#2699D6;
 }
-.mainBox button{
+.mainBox #generateButton{
     height: 30px;
-    width: 200px;
+    width: 100%;
     background-color: #585fa8;
     border: none;
-    border-radius: 5px;
-    margin-top: 20px;
+    border-radius: 7px;
+    margin-top: 10px;
     font-weight: bold;
     transition: all 0.2s;
     transform: scale(1);
     color: #FFFFFF;
 }
-.mainBox button:hover{
+.mainBox #generateButton:hover{
     background: linear-gradient(-45deg, #585fa8, #25BBAB, #2699D6) no-repeat;
-    transform: scale(1.05);
-
+    transform: scale(1.03);
 }
-.mainBox button:active{
+.mainBox #generateButton:active{
     background: linear-gradient(-45deg, #3f4378, #167168, #165578) no-repeat;
-    transform: scale(0.95);
+    transform: scale(0.97);
+}
+#infoGenButton, #infoCheckButton {
+    background-color: transparent;
+    border: none;
+    transition: all 0.2s;
+    transform: scale(1);
+    color: #333;
+    text-shadow: 0 0 4px #fff;
+}
+#infoGenButton:hover, #infoCheckButton:hover {
+    transform: scale(1.2);
+}
+#infoGenButton:active, #infoCheckButton:active {
+    transform: scale(0.97);
+}
+.leviBox {
+    background-color: white;
+    padding: 15px;
+    box-shadow: #070C21;
+    border-radius: 7px;
+    box-shadow: 0 0 15px #585fa8;
+}
+
+.genSettings {
+    margin: 15px 0;
+    background-color: #2699D6;
+    padding: 10px 15px;
+    box-shadow: #070C21;
+    border-radius: 7px;
+    color: #333;
+    text-shadow: 0 0 4px #fff;
 }
 
 textarea {
@@ -109,4 +142,28 @@ footer {
 }
 .ikit {
     background: linear-gradient(-45deg, #585fa8, #25BBAB, #2699D6) no-repeat;;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0; /* Устанавливаем начальную непрозрачность в 0 */
+    transition: opacity 0.3s ease; /* Добавляем анимацию перехода */
+    pointer-events: none; /* Чтобы всплывающее окно не мешало взаимодействовать с основным контентом */
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }

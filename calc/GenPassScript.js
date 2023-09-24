@@ -37,7 +37,26 @@ document.getElementById("generateButton").addEventListener("click", function () 
 });
 
 function calculatePasswordEntropy(password) {
-    const charset = 128; // Размер алфавита (ASCII символов)
+    const charset_a = "abcdefghijklmnopqrstuvwxyz";
+    const charset_A = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const charset_0 = "0123456789";
+    const charset_$ = "!@#$%^&*()_+{}[]|<>?";
+    var charset = 0; // Размер алфавита (ASCII символов)
+    var is_a = false; // Есть ли в пароле буквы в нижнем регистре
+    var is_A = false; // Есть ли в пароле буквы в верхнем регистре
+    var is_0 = false; // Есть ли в пароле цифры
+    var is_$ = false; // Есть ли в пароле спецсимволы
+    for (var i = 0; i < password.length; i++) {
+      /* Проверяем каждый символ пароля на принадлежность к тому или иному типу */
+      if (!is_a && charset_a.indexOf(password[i]) != -1) is_a = true;
+      else if (!is_A && charset_A.indexOf(password[i]) != -1) is_A = true;
+      else if (!is_0 && charset_0.indexOf(password[i]) != -1) is_0 = true;
+      else if (!is_$ && charset_$.indexOf(password[i]) != -1) is_$ = true;
+    }
+    if (is_a) charset += 26; // Если в пароле есть символы в нижнем регистре, то увеличиваем рейтинг сложности
+    if (is_A) charset += 26; // Если в пароле есть символы в верхнем регистре, то увеличиваем рейтинг сложности
+    if (is_0) charset += 10; // Если в пароле есть цифры, то увеличиваем рейтинг сложности
+    if (is_$) charset += 20; // Если в пароле есть спецсимволы, то увеличиваем рейтинг сложности
     const length = password.length;
 
     if (length === 0) {
@@ -51,6 +70,7 @@ function calculatePasswordEntropy(password) {
             entropy += Math.log2(charset); // Добавляем логарифм размера алфавита
         }
     }
+    
 
     return entropy;
 }

@@ -15,27 +15,27 @@
 
 <body>
     <header>
-        <div class="headerBox container col-6">
-            <h1>Генератор паролей
-                <button type="button" id="infoGenButton">🛈</button>
-                <div id="infoModal" class="modal">
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <p>Выберите оптимальную длину пароля. Обычно рекомендуется использовать пароли длиной не
-                            менее 12 символов, но чем длиннее, тем лучше. Рекомендуется включать разные категории
-                            символов в пароль.
-                            </p>
-                            <p>Брутфорс (Brute Force): Это метод атаки, при котором злоумышленник попытывается угадать
-                                пароль, перебирая все возможные комбинации символов, до тех пор, пока не найдет
-                                правильный пароль. Чем длиннее пароль и разнообразней категории символов в нем, тем
-                                дольше будет подбираться пароль.</p>
-                    </div>
-                </div>
+        <div class="headerBox container-fluid  col-xxl-4 col-xl-7 col-lg-5 col-md-8 col-sm-10 ">
+            <h1>Генератор паролей<button type="button" id="infoGenButton" data-toggle="collapse"
+                    data-target="#settingsBlock">🛈</button>
             </h1>
+            <div id="infoModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>Выберите оптимальную длину пароля. Обычно рекомендуется использовать пароли длиной не
+                        менее 12 символов, но чем длиннее, тем лучше. Рекомендуется включать разные категории
+                        символов в пароль.
+                    </p>
+                    <p>Брутфорс (Brute Force): Это метод атаки, при котором злоумышленник попытывается угадать
+                        пароль, перебирая все возможные комбинации символов, до тех пор, пока не найдет
+                        правильный пароль. Чем длиннее пароль и разнообразней категории символов в нем, тем
+                        дольше будет подбираться пароль.</p>
+                </div>
+            </div>
         </div>
     </header>
     <main>
-        <div class="mainBox container col-6 mx-auto">
+        <div class="mainBox container col-xxl-4 col-xl-7 col-lg-5 col-md-8 col-sm-10 mx-auto ">
             <div class="leviBox">
                 <input type="text" id="passwordInput" readonly><br>
                 <button type="button" id="generateButton">Сгенирировать</button>
@@ -58,7 +58,7 @@
                             <p></p>
                         </div>
                     </div>
-                    <input type="text" id="passwordCheck" oninput="updateProgressBar()">
+                    <input type="text" id="passwordCheck" pattern="[A-Za-z0-9!@#$%^&*()_+{}[\]|<>?]*" oninput="updateProgressBar()">
                     <div class="progress">
                         <div id="progressBar" class="progress-bar" role="progressbar" style="width: 0%;"
                             aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
@@ -86,6 +86,7 @@
         integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
     </script>
     <script src="GenPassScript.js"></script>
+    
 </body>
 
 </html>

@@ -10,13 +10,7 @@ header {
 body {
     background-color: #F1F9FE;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
-    /*
-    background-color: #070C21;
-    color: #2699D6;
-    background: linear-gradient(-45deg, #585fa8, #25BBAB, #2699D6) no-repeat;
-    
-    */
+    color: #333;
 }
 
 .mainBox {
@@ -32,8 +26,8 @@ body {
 #passwordInput, #passwordCheck{
     width: 100%;
 }
-.mainBox input:active{
-    box-shadow: 0 0 5px#2699D6;
+.mainBox input:focus{
+    box-shadow: 0 0 10px#2699D6;
 }
 .mainBox #generateButton{
     height: 30px;
@@ -56,12 +50,12 @@ body {
     transform: scale(0.97);
 }
 #infoGenButton, #infoCheckButton {
+    color: #333;
+    font-size: 30px;
     background-color: transparent;
     border: none;
     transition: all 0.2s;
     transform: scale(1);
-    color: #333;
-    text-shadow: 0 0 4px #fff;
 }
 #infoGenButton:hover, #infoCheckButton:hover {
     transform: scale(1.2);
@@ -76,30 +70,13 @@ body {
     border-radius: 7px;
     box-shadow: 0 0 15px #585fa8;
 }
-
 .genSettings {
     margin: 15px 0;
     background-color: #2699D6;
     padding: 10px 15px;
     box-shadow: #070C21;
     border-radius: 7px;
-    color: #333;
-    text-shadow: 0 0 4px #fff;
-}
-
-textarea {
-    margin-top: 10px;
-    font-size: 17px;
-    color: #737373;
-    font-weight: bold;
-    padding: 10px;
-    opacity: 0.8;
-    resize: none;
-    width: 632px;
-    height: 120px;
-    border-radius: 2px;
-    transition: all 0.2s;
-    transform: scale(1);
+    color: #fff;
 }
 
 
@@ -116,7 +93,7 @@ footer {
     width: 100%; /* Ширина футера на всю ширину страницы */
 }
 .footerBox {
-    padding: 20px;
+    padding-top: 20px;
 }
 
 .progress {
@@ -144,6 +121,7 @@ footer {
     background: linear-gradient(-45deg, #585fa8, #25BBAB, #2699D6) no-repeat;;
 }
 
+
 .modal {
     display: none;
     position: fixed;
@@ -158,6 +136,8 @@ footer {
 }
 
 .modal-content {
+    font-size: 20px;
+    font-weight: 300;
     position: absolute;
     top: 50%;
     left: 50%;

@@ -49,18 +49,22 @@ body {
     background: linear-gradient(-45deg, #3f4378, #167168, #165578) no-repeat;
     transform: scale(0.97);
 }
-#infoGenButton, #infoCheckButton {
+#infoGenButton {
     color: #333;
-    font-size: 30px;
+    border: 3px solid #333;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 100px;
+    font-size: 20px;
+    font-weight: bold;
     background-color: transparent;
-    border: none;
     transition: all 0.2s;
     transform: scale(1);
 }
-#infoGenButton:hover, #infoCheckButton:hover {
+#infoGenButton:hover {
     transform: scale(1.2);
 }
-#infoGenButton:active, #infoCheckButton:active {
+#infoGenButton:active {
     transform: scale(0.97);
 }
 .leviBox {
@@ -146,4 +150,7 @@ footer {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+.close {
+    font-size: 30px;
 }

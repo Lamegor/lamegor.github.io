@@ -50,8 +50,8 @@ body {
     transform: scale(0.97);
 }
 #infoGenButton {
-    color: #333;
-    border: 3px solid #333;
+    color: #070C21;
+    border: 3px solid #070C21;
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 100px;
@@ -99,7 +99,6 @@ footer {
 .footerBox {
     padding-top: 20px;
 }
-
 .progress {
     height: 20px;
     margin-top: 10px;
@@ -109,15 +108,12 @@ footer {
 .progress-bar {
     transition: width 0.3s ease-in-out; /* Плавная анимация изменения ширины */
 }
-
 .weak {
     background-color: #ff5733; /* Красный цвет для слабых паролей */
 }
-
 .moderate {
     background-color: #ffc433; /* Оранжевый цвет для средних паролей */
 }
-
 .strong {
     background-color: #33ff57; /* Зеленый цвет для сильных паролей */
 }
@@ -153,4 +149,7 @@ footer {
 }
 .close {
     font-size: 30px;
+}
+#strengthLabel {
+    margin-bottom: 0;
 }
